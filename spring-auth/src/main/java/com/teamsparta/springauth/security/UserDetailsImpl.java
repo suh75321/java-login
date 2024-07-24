@@ -42,7 +42,9 @@ public class UserDetailsImpl implements UserDetails {
         authorities.add(simpleGrantedAuthority);
 
         return authorities;
-    }
+    }//사용자의 역할(UserRoleEnum role = user.getRole();)을 가져와서 해당 역할의
+    // 권한(String authority = role.getAuthority();)을 SimpleGrantedAuthority 객체로 변환하고,
+    // 이를 권한 목록에 추가. 따라서 사용자의 역할에 따라 적절한 권한이 부여
 
     @Override
     public boolean isAccountNonExpired() {
