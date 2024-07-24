@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 @Slf4j(topic = "LoggingFilter")
-@Component
+//@Component security 할거면 필요없음
 @Order(1)
 public class LoggingFilter implements Filter {
     @Override
